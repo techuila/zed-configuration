@@ -1,0 +1,41 @@
+ [
+   {
+      "context": "Editor && VimControl",
+      "bindings": {
+          "shift-h": "editor::MoveToBeginningOfLine",
+          "shift-l": "editor::MoveToEndOfLine",
+          "alt-k": "editor::MoveLineUp",
+          "alt-j": "editor::MoveLineDown",
+          "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+          "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+          "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+          "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+          "\\": "workspace::ToggleRightDock",
+          "alt-h": "pane::ActivatePrevItem",
+          "alt-l": "pane::ActivateNextItem"
+      }
+   },
+   {
+      "context": "Workspace",
+      "use_key_equivalents": true,
+      "bindings": {
+        "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+        "\\": "workspace::ToggleRightDock"
+      }
+   },
+   {
+     "context": "Terminal",
+     "use_key_equivalents": true,
+     "bindings": {
+       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+     }
+   },
+   {
+     "context": "FileFinder || (FileFinder > Picker > Editor)",
+     "use_key_equivalents": true,
+     "bindings": {
+       "ctrl-v": "pane::SplitRight"
+     }
+   },
+ ]
