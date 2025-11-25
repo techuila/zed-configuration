@@ -2,8 +2,8 @@
    {
       "context": "Editor && VimControl",
       "bindings": {
-          "shift-h": "editor::MoveToBeginningOfLine",
-          "shift-l": "editor::MoveToEndOfLine",
+          "shift-h": "vim::StartOfLine",
+          "shift-l": "vim::EndOfLine",
           "alt-k": "editor::MoveLineUp",
           "alt-j": "editor::MoveLineDown",
           "ctrl-h": "workspace::ActivatePaneLeft",
