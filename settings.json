@@ -7,6 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "base_keymap": "VSCode",
+  "gutter": {
+    "line_numbers": true
+  },
+  "cursor_shape": "bar",
+  "cursor_blink": true,
+  "preferred_line_length": 120,
+  "soft_wrap": "none",
   "prettier": {
     "allowed": true
   },
@@ -18,7 +26,8 @@
   },
   "use_on_type_format": false,
   "project_panel": {
-    "dock": "right"
+    "dock": "right",
+    "auto_fold_dirs": false
   },
   "theme": "Gruvbox Dark",
   "telemetry": {
@@ -29,17 +38,48 @@
   "ui_font_size": 14,
   "buffer_font_size": 14,
   "terminal": {
-    "font_size": 12
+    "env": {},
+    "font_size": 12.0,
+    "font_family": "FiraCode Nerd Font Mono"
   },
   "format_on_save": "on",
-  "relative_line_numbers": true,
-  "formatter": {
-    "external": {
-      "command": "node_modules/.bin/prettier",
-      "arguments": [
-        "--stdin-filepath",
-        "{buffer_path}"
-      ]
+  "relative_line_numbers": "enabled",
+  "languages": {
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "pnpm",
+          "arguments": ["exec", "prettier", "--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "pnpm",
+          "arguments": ["exec", "prettier", "--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": "on"
+    },
+    "TSX": {
+      "formatter": {
+        "external": {
+          "command": "pnpm",
+          "arguments": ["exec", "prettier", "--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": "on"
     }
   }
 }
