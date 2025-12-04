@@ -44,7 +44,31 @@
   },
   "format_on_save": "on",
   "relative_line_numbers": "enabled",
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    }
+  },
   "languages": {
+    "Go": {
+      "code_actions_on_format": {},
+      "formatter": {
+        "external": {
+          "command": "goimports",
+          "arguments": []
+        }
+      }
+    },
     "JavaScript": {
       "formatter": {
         "external": {
