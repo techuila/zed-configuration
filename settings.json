@@ -104,6 +104,9 @@
         "source.fixAll.eslint": true
       },
       "format_on_save": "on"
+    },
+    "Plain Text": {
+      "ensure_final_newline_on_save": false
     }
   }
 }
